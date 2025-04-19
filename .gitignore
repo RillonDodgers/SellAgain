@@ -1,0 +1,23 @@
+# Ignore Rider/IDEA settings
+.idea/
+*.DotSettings.user
+
+# Build artifacts
+bin/
+obj/
+libs/
+
+# VS + Rider specific
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Temporary files
+*.log
+*.tmp
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
