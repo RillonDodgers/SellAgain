@@ -6,9 +6,9 @@ using System.Text.Json;
 namespace SellAgain {
     public class ModConfig {
         public int dealCooldown { get; set; } = 360;
-        public bool allowSellingAfterCompletedDeal { get; set; } = false;
-        public bool allowSellingWithPendingContract { get; set; } = false;
-        public bool allowOfferingAgain { get; set; } = false;
+        public bool allowSellingAfterCompletedDeal { get; set; } = true;
+        public bool allowSellingWithPendingContract { get; set; } = true;
+        public bool allowOfferingAgain { get; set; } = true;
     }
 
     public static class Config {
@@ -32,7 +32,7 @@ namespace SellAgain {
                 var json = File.ReadAllText(ConfigPath);
                 Data = JsonSerializer.Deserialize<ModConfig>(json);
             } catch {
-                Data = new ModConfig(); // fallback if it fails
+                Data = new ModConfig();
             }
         }
 
